@@ -1,0 +1,32 @@
+{
+  "user": [
+    {
+      "id": "1",
+      "name": "1",
+      "email": "werwr",
+      "status": "Inactive",
+      "password": "1"
+    },
+    {
+      "id": "35",
+      "name": "akhil",
+      "email": "jeswinjohnson@thoughtline",
+      "status": "Active",
+      "password": "asdfsd"
+    },
+    {
+      "id": "22",
+      "name": "sreeson",
+      "email": "sreeson@gmail.com",
+      "status": "Active",
+      "password": "123"
+    },
+    {
+      "id": "2",
+      "name": "k",
+      "email": "adrin@gmail.com",
+      "status": "Active",
+      "password": "s"
+    }
+  ]
+}

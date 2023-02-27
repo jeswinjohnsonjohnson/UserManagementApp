@@ -1,0 +1,53 @@
+<div class="d-flex align-items-start">
+  <div style="width:200px;height: 670px; background-color: rgb(77, 218, 218);" class="nav flex-column nav-pills me-3"
+    id="v-pills-tab" role="tablist" aria-orientation="vertical"><br><br>
+    <button style="width: 100px; color: white;" class="nav-link active container" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home"
+      type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</button>
+
+    <button style="width: 100px; color: white;" class="nav-link container" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile"
+      type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Users</button>
+  </div>
+  <div class="tab-content container" id="v-pills-tabContent">
+
+    <div style="text-align: center; margin-top: 200px;" class="tab-pane fade show active" id="v-pills-home"
+      role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
+      <h1>Welcome to Employee Portal</h1>
+    </div>
+
+    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
+      <div class="row">
+        <div>
+          <div style="margin-top: 30px;" class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+              <br>
+              <button (click)="addUser()" class="btn btn-success">New User</button>
+              <table class="table table-bordered" style="margin-top: 20px;">
+                <thead>
+                  <tr>
+                    <th scope="col">User ID</th>
+                    <th scope="col">User Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let user of details">
+                    <td>{{user.id}}</td>
+                    <td>{{user.name}}</td>
+                    <td>{{user.email}}</td>
+                    <td [ngStyle]="{'color': user.status=='Active'? 'green' : 'red'}">{{user.status}}</td>
+                    <td>
+                      <button (click)="editUser(user.id)" class="btn btn-dark">Edit</button>&nbsp;
+                      <button (click)="deleteUser(user.id)" class="btn btn-danger">Delete</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+<div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
+        <div class="bg-light p-4">
+          <h2 class="text-center mb-4">Add / Edit User</h2>
+          <form #heroform="ngForm">
+            <div class="mb-3">
+              <label for="id" class="form-label">User ID</label>
+              <input type="text" [(ngModel)]="id1" name="id" class="form-control" id="id"
+                [disabled]="isDisabled" [ngClass]="{ 'disabled-input': isDisabled }">
+            </div>
+            <div class="mb-3">
+              <label for="name" class="form-label">User Name</label>
+              <input type="text" [(ngModel)]="name1" name="name" class="form-control" id="name">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Id</label>
+              <input type="text" [(ngModel)]="email1" name="email" class="form-control" id="email">
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="text" [(ngModel)]="password1" name="password" class="form-control" id="password">
+            </div>
+            <div class="mb-3">
+              <label for="status" class="form-label">Status</label>
+              <select (click)="backycolor()" id="status" [style.color]="color" class="form-control"
+                [(ngModel)]="status1" name="status">
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+              </select>
+            </div>
+            <div class="mb-3 text-center">
+              <button *ngIf="id==null" (click)="add()" id="save" type="submit" class="btn btn-success me-3">Save</button>
+              <button *ngIf="id!=null" (click)="update()" id="cancel" type="submit" class="btn btn-secondary me-3">Update</button>
+              <button (click)="cancel(); heroform.resetForm()" type="submit" class="btn btn-warning">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
