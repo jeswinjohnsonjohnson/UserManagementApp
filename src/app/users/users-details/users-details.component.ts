@@ -34,6 +34,7 @@ export class UsersDetailsComponent {
   constructor(private http: HttpClient, private route: Router, private service: UserService, private rou: ActivatedRoute) { }
 
   ngOnInit(): void {
+    
 
     //calling params
 

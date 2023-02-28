@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../users.service';
-import { Task } from '../users.model';
 
 
 
@@ -21,6 +20,11 @@ export class UsersListComponent {
 
   ngOnInit(): void {
 
+   if(localStorage.getItem("ForT")==null){
+    this.Route.navigateByUrl('')
+    alert('Login First')
+   }
+   
     this.view()
 
   }
@@ -62,6 +66,10 @@ export class UsersListComponent {
 
 
 
+  LogOut(){
+    this.Route.navigateByUrl('')
+    localStorage.clear()
+   }
 
 
 

@@ -1,18 +1,11 @@
 {
   "user": [
     {
-      "id": "1",
-      "name": "1",
-      "email": "werwr",
-      "status": "Inactive",
-      "password": "1"
-    },
-    {
       "id": "35",
-      "name": "akhil",
+      "name": "1",
       "email": "jeswinjohnson@thoughtline",
       "status": "Active",
-      "password": "asdfsd"
+      "password": "1"
     },
     {
       "id": "22",
@@ -27,6 +20,13 @@
       "email": "adrin@gmail.com",
       "status": "Active",
       "password": "s"
+    },
+    {
+      "id": "33",
+      "name": "ww",
+      "email": "",
+      "status": "",
+      "password": ""
     }
   ]
 }
